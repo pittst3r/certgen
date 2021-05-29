@@ -1,0 +1,24 @@
+Usage: certgen COMMAND [OPTIONS] ARGUMENTS
+
+Generate self-signed CA and leaf X.509 certificates. For internal/private use
+only; self-signed certificates should not be exposed publicly because they
+cannot be verified and trusted by a third-party.
+
+Commands:
+
+    ca [--ttl=3650 --mode=0600 --owner=0:0] <common-name>
+            Generate a self-signed root CA certificate
+
+    leaf [--ttl=30 --mode=0600 --owner=0:0] <ca-name> <common-name>
+            Generate a leaf certificate using the given root certificate
+
+Options:
+
+    --ttl number
+            Number of days for which the certificate will be valid
+
+    --mode number
+            The mode of the files
+
+    --owner uid[:gid]
+            The user and optionally group owner of the files
