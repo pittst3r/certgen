@@ -23,9 +23,6 @@ create_ca()
 
 create_leaf()
 {
-  filename=$1
-  cn=$2
-
   create_csr_and_key $leaf_name
   openssl x509 -req -in "$leaf_name.csr" -days $ttl -CA "$ca_name.crt" -CAkey "$ca_name.key" -CAcreateserial -out "$leaf_name.crt"
   set_perms "$leaf_name.crt"
