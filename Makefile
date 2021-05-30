@@ -21,4 +21,5 @@ docker-hub-login:
 	docker login
 
 publish: build-release tag-release docker-hub-login
-	docker push ${image_name}
+	docker push ${image_name}:${version}
+	docker push ${image_name}:latest
