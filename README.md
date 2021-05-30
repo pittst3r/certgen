@@ -33,9 +33,9 @@ Generate a self-signed root CA certificate and private key.
 
 ##### Options
 
-- `--ttl <integer>`: (default: 3650) Number of days for which the certificate
+- `--ttl <integer>`: (default: `3650`) Number of days for which the certificate
   will be valid
-- `--mode <integer>`: (default: 0600 (rw-------)) Sets the mode of the files
+- `--mode <integer>`: (default: `0600` aka `rw-------`) Sets the mode of the files
 
 #### `leaf`
 
@@ -49,6 +49,6 @@ Generate a leaf certificate using the given CA certificate/key.
 
 ##### Options
 
-- `--ttl <integer>`: (default: 30) Number of days for which the certificate
+- `--ttl <integer>`: (default: `30`) Number of days for which the certificate
   will be valid
-- `--mode <integer>`: (default: 0600 (rw-------)) Sets the mode of the files
+- `--mode <integer>`: (default: `0600` aka `rw-------`) Sets the mode of the files
