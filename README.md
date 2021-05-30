@@ -13,10 +13,10 @@ certgen COMMAND [OPTIONS] [ARGUMENTS]
 ### Examples
 
 ```shell
-$ docker run -v $PWD/certs:/certs pittst3r/certgen ca foo-ca
-$ docker run -v $PWD/certs:/certs pittst3r/certgen leaf foo-ca bar-baz
-$ openssl verify -CAfile certs/foo-ca.crt certs/bar-baz.crt
-> certs/bar-baz.crt: OK
+docker run -v $PWD/certs:/certs pittst3r/certgen ca foo-ca
+docker run -v $PWD/certs:/certs pittst3r/certgen leaf foo-ca bar-baz
+openssl verify -CAfile certs/foo-ca.crt certs/bar-baz.crt
+# > certs/bar-baz.crt: OK
 ```
 
 ### Commands
