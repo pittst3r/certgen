@@ -1,6 +1,6 @@
 # certgen
 
-Container for generating self-signed CA and leaf X.509 certificates. For
+Docker image for generating self-signed CA and leaf X.509 certificates. For
 internal/private use only; self-signed certificates should not be exposed
 publicly because they cannot be verified and trusted by a third-party.
 
@@ -13,8 +13,8 @@ certgen COMMAND [OPTIONS] [ARGUMENTS]
 ### Examples
 
 ```shell
-$ docker run -v $PWD/certs:/certs certgen ca foo-ca
-$ docker run -v $PWD/certs:/certs certgen leaf foo-ca bar-baz
+$ docker run -v $PWD/certs:/certs pittst3r/certgen ca foo-ca
+$ docker run -v $PWD/certs:/certs pittst3r/certgen leaf foo-ca bar-baz
 $ openssl verify -CAfile certs/foo-ca.crt certs/bar-baz.crt
 > certs/bar-baz.crt: OK
 ```
