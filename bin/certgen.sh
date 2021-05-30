@@ -8,7 +8,6 @@ shift
 
 ttl=0
 mode=0600
-owner=0:0
 
 for opt in "$@"
 do
@@ -31,15 +30,6 @@ do
       shift
       shift
       ;;
-    --owner=*)
-      owner="${opt#*=}"
-      shift
-      ;;
-    --owner)
-      owner=$2
-      shift
-      shift
-      ;;
   esac
 done
 
@@ -58,7 +48,6 @@ case $cmd in
     then
       ttl=3650
     fi
-
     create_ca
     ;;
   leaf)
@@ -69,6 +58,6 @@ case $cmd in
     create_leaf
     ;;
   *)
-    usage
+    cat /usr/lib/certgen/usage.txt
     ;;
 esac

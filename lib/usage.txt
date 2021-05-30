@@ -6,10 +6,10 @@ cannot be verified and trusted by a third-party.
 
 Commands:
 
-    ca [--ttl=3650 --mode=0600 --owner=0:0] <common-name>
+    ca [--ttl=3650 --mode=0600] <common-name>
             Generate a self-signed root CA certificate
 
-    leaf [--ttl=30 --mode=0600 --owner=0:0] <ca-name> <common-name>
+    leaf [--ttl=30 --mode=0600] <ca-name> <common-name>
             Generate a leaf certificate using the given root certificate
 
 Options:
@@ -19,6 +19,3 @@ Options:
 
     --mode number
             The mode of the files
-
-    --owner uid[:gid]
-            The user and optionally group owner of the files
