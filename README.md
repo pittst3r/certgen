@@ -27,7 +27,7 @@ Generate a self-signed root CA certificate and private key.
 
 ##### Arguments
 
-1. The name (CN) of the CA, which will also be used as the cert and key file
+1. The Common Name of the CA, which will also be used as the cert and key file
    names (less the extension); IMPORTANT: this name cannot be shared by any of
    the certificates you create with this root certificate
 
@@ -35,7 +35,7 @@ Generate a self-signed root CA certificate and private key.
 
 - `--ttl <integer>`: (default: `3650`) Number of days for which the certificate
   will be valid
-- `--mode <integer>`: (default: `0600` aka `rw-------`) Sets the mode of the files
+- `--mode <integer>`: (default: `0600`) Sets the mode of the files
 
 #### `leaf`
 
@@ -43,12 +43,12 @@ Generate a leaf certificate using the given CA certificate/key.
 
 ##### Arguments
 
-1. The name (CN) of the CA certificate
-2. The name (CN) of this certificate, which will also be used as the cert and
+1. The Common Name of the CA certificate
+2. The Common Name of this certificate, which will also be used as the cert and
    key file names (less the extension)
 
 ##### Options
 
 - `--ttl <integer>`: (default: `30`) Number of days for which the certificate
   will be valid
-- `--mode <integer>`: (default: `0600` aka `rw-------`) Sets the mode of the files
+- `--mode <integer>`: (default: `0600`) Sets the mode of the files
